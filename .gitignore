@@ -8,3 +8,4 @@ data/train.jsonl
 data/spm_corpus.txt
 logs/
 .ipynb_checkpoints/
+submission/
