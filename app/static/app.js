@@ -72,6 +72,7 @@ function arena() {
   if (!LIVE) {
     $("#arena-note").textContent = "This copy replays stored outputs: pick one of the example sentences. Run the local server to translate anything.";
     $("#temp").disabled = true;
+    if (examples.length) $("#src").value = examples[0];
   }
   run();
 }
