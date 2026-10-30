@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anuvaad Lab</title>
+<meta name="description" content="English→Hindi machine translation benchmark: Transformer, mT5, LLaMA and Gemma compared on quality, cost and responsible-AI probes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-hi">अनुवाद</span> Lab</a>
+  <nav>
+    <a href="#arena">Arena</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#analysis">Cost &amp; quality</a>
+    <a href="#temperature">Temperature</a>
+    <a href="#responsible">Responsible AI</a>
+    <a href="#explorer">Test set</a>
+  </nav>
+  <span class="mode" id="mode" title="Live mode runs the models on this machine; static mode replays stored outputs.">…</span>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-word" aria-hidden="true"><span>अनुवाद</span></div>
+    <div class="hero-copy">
+      <h1>English into Hindi, four ways.</h1>
+      <p class="lede">A Transformer written from scratch, a fine-tuned mT5, and LoRA-adapted LLaMA&nbsp;3.2 and Gemma&nbsp;3 — trained on the IIT Bombay parallel corpus, scored on the same 500 sentences, and checked for bias and hallucination.</p>
+      <dl class="facts" id="facts"></dl>
+    </div>
+  </section>
+
+  <section id="arena" class="block">
+    <div class="block-head">
+      <h2>Translation arena</h2>
+      <p id="arena-note">Type an English sentence and compare every model side by side.</p>
+    </div>
+    <div class="arena">
+      <div class="arena-input">
+        <label for="src" class="sr-only">English sentence</label>
+        <textarea id="src" rows="3" maxlength="600" placeholder="The doctor finished her shift and went home.">The doctor finished her shift and went home.</textarea>
+        <div class="chips" id="chips"></div>
+        <div class="controls">
+          <div class="toggles" id="toggles"></div>
+          <label class="temp">Temperature <output id="tval">0.0</output>
+            <input type="range" id="temp" min="0" max="1.3" step="0.1" value="0">
+          </label>
+          <button id="go" class="btn">Translate</button>
+        </div>
+      </div>
+      <ol class="outputs" id="outputs" aria-live="polite"></ol>
+    </div>
+  </section>
+
+  <section id="leaderboard" class="block">
+    <div class="block-head">
+      <h2>Leaderboard</h2>
+      <p>Corpus scores on the 500-sentence news test set. Click a column to sort. Whiskers show 95% bootstrap confidence intervals.</p>
+    </div>
+    <div class="table-wrap"><table class="board" id="board"></table></div>
+    <p class="note" id="sig-note"></p>
+  </section>
+
+  <section id="analysis" class="block">
+    <div class="block-head">
+      <h2>What the quality costs</h2>
+      <p>Encoder–decoder versus decoder-only: size, training time, speed and how each tokenizer splits Hindi.</p>
+    </div>
+    <div class="grid">
+      <figure class="panel wide"><figcaption>chrF against latency — bubble area follows parameter count</figcaption><div class="cv"><canvas id="c-pareto"></canvas></div></figure>
+      <figure class="panel"><figcaption>Parameters (millions, log scale)</figcaption><div class="cv"><canvas id="c-params"></canvas></div></figure>
+      <figure class="panel"><figcaption>Training or fine-tuning time (minutes)</figcaption><div class="cv"><canvas id="c-train"></canvas></div></figure>
+      <figure class="panel"><figcaption>Tokens per word — lower means Hindi is cheaper to model</figcaption><div class="cv"><canvas id="c-fert"></canvas></div></figure>
+      <figure class="panel"><figcaption>Share of test sentences in each chrF band</figcaption><div class="cv"><canvas id="c-dist"></canvas></div></figure>
+    </div>
+  </section>
+
+  <section id="temperature" class="block">
+    <div class="block-head">
+      <h2>Sampling temperature</h2>
+      <p>150 test sentences decoded at five temperatures. Two independent samples per setting measure diversity.</p>
+    </div>
+    <div class="tabs" id="temp-tabs" role="tablist"></div>
+    <div class="grid two">
+      <figure class="panel"><div class="cv tall"><canvas id="c-temp"></canvas></div></figure>
+      <div class="panel temp-samples">
+        <label class="temp">Show samples at T = <output id="tsv">0.0</output>
+          <input type="range" id="tslider" min="0" max="4" step="1" value="0">
+        </label>
+        <div id="tsamples"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="responsible" class="block">
+    <div class="block-head">
+      <h2>Responsible AI probes</h2>
+      <p>Hindi verbs carry gender, so “went home” becomes either <span lang="hi">चला गया</span> or <span lang="hi">चली गई</span>. We test whether each model follows the pronoun or the stereotype.</p>
+    </div>
+    <div class="gender" id="gender"></div>
+    <h3 class="sub">Which gender does a model pick when the English gives none?</h3>
+    <div class="table-wrap"><table class="amb" id="amb"></table></div>
+    <h3 class="sub">Targeted probes</h3>
+    <div class="tabs" id="probe-tabs" role="tablist"></div>
+    <div class="probes" id="probes"></div>
+  </section>
+
+  <section id="explorer" class="block">
+    <div class="block-head">
+      <h2>Test-set explorer</h2>
+      <p>Every test sentence with its reference and each model’s output, coloured by sentence chrF.</p>
+    </div>
+    <div class="explorer-controls">
+      <input id="q" type="search" placeholder="Filter by English or Hindi text">
+      <label><input type="checkbox" id="flagged"> Only sentences with a guardrail flag</label>
+      <select id="sort">
+        <option value="id">Original order</option>
+        <option value="spread">Largest disagreement between models</option>
+        <option value="worst">Lowest average chrF</option>
+      </select>
+    </div>
+    <div id="rows"></div>
+    <button class="btn ghost" id="more">Show 15 more</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Dataset: <a id="ds-link" href="https://huggingface.co/datasets/cfilt/iitb-english-hindi">IIT Bombay English–Hindi Parallel Corpus</a> (Kunchukuttan et al., 2018). Built for ICT4403 Foundations of Generative AI, Assignment 3.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

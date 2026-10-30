@@ -1,0 +1,30 @@
+{
+  "model": "mt5",
+  "params": 300176768,
+  "trainable_params": 300176768,
+  "train_time_sec": 2837.9746582508087,
+  "train_pairs": 32000,
+  "steps": 2000,
+  "device": "mps",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss_ema": 2.8969873077616555,
+      "val_bleu_greedy": 2.0870887454296736,
+      "val_chrf_greedy": 19.024204478190114,
+      "epoch_sec": 2837.459261894226
+    }
+  ],
+  "best_val_chrf": 19.024204478190114,
+  "config": {
+    "model_id": "google/mt5-small",
+    "train_size": 32000,
+    "epochs": 1,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "lr": 0.001,
+    "max_len": 96,
+    "beam_size": 4,
+    "prefix": "translate English to Hindi: "
+  }
+}

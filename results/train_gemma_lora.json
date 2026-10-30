@@ -1,0 +1,157 @@
+{
+  "model": "gemma",
+  "base_model": "unsloth/gemma-3-1b-it",
+  "params": 999885952,
+  "trainable_params": 13045760,
+  "train_time_sec": 2080.7929649353027,
+  "train_pairs": 6000,
+  "device": "mps",
+  "history": [
+    {
+      "step": 0,
+      "loss_ema": 4.668508052825928
+    },
+    {
+      "step": 50,
+      "loss_ema": 4.134579299029047
+    },
+    {
+      "step": 100,
+      "loss_ema": 3.224652876418496
+    },
+    {
+      "step": 150,
+      "loss_ema": 2.8411194764655447
+    },
+    {
+      "step": 200,
+      "loss_ema": 2.5941310885550117
+    },
+    {
+      "step": 250,
+      "loss_ema": 2.463675547482141
+    },
+    {
+      "step": 300,
+      "loss_ema": 2.4946378480316618
+    },
+    {
+      "step": 350,
+      "loss_ema": 2.463891415800812
+    },
+    {
+      "step": 400,
+      "loss_ema": 2.4696072919653353
+    },
+    {
+      "step": 450,
+      "loss_ema": 2.3515235038535445
+    },
+    {
+      "step": 500,
+      "loss_ema": 2.3816562799292385
+    },
+    {
+      "step": 550,
+      "loss_ema": 2.29843457935288
+    },
+    {
+      "step": 600,
+      "loss_ema": 2.2453885393988573
+    },
+    {
+      "step": 650,
+      "loss_ema": 2.3010836943554582
+    },
+    {
+      "step": 700,
+      "loss_ema": 2.452554731085855
+    },
+    {
+      "step": 750,
+      "loss_ema": 2.3157075556961533
+    },
+    {
+      "step": 800,
+      "loss_ema": 2.3825136521559886
+    },
+    {
+      "step": 850,
+      "loss_ema": 2.353815585848935
+    },
+    {
+      "step": 900,
+      "loss_ema": 2.2917549156151065
+    },
+    {
+      "step": 950,
+      "loss_ema": 2.255638632089551
+    },
+    {
+      "step": 1000,
+      "loss_ema": 2.2449360258509286
+    },
+    {
+      "step": 1050,
+      "loss_ema": 2.2811812366261752
+    },
+    {
+      "step": 1100,
+      "loss_ema": 2.24660341092066
+    },
+    {
+      "step": 1150,
+      "loss_ema": 2.228382626000859
+    },
+    {
+      "step": 1200,
+      "loss_ema": 2.2619844413038583
+    },
+    {
+      "step": 1250,
+      "loss_ema": 2.228262769930725
+    },
+    {
+      "step": 1300,
+      "loss_ema": 2.211931505375821
+    },
+    {
+      "step": 1350,
+      "loss_ema": 2.239192700631078
+    },
+    {
+      "step": 1400,
+      "loss_ema": 2.2215938403938957
+    },
+    {
+      "step": 1450,
+      "loss_ema": 2.276924106013654
+    }
+  ],
+  "val_bleu": 10.546645541871914,
+  "val_chrf": 38.457512005724645,
+  "config": {
+    "model_id": "unsloth/gemma-3-1b-it",
+    "short": "gemma",
+    "train_size": 6000,
+    "epochs": 1,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "max_len": 160,
+    "max_new_tokens": 120,
+    "n_shots": 4,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}

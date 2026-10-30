@@ -1,0 +1,36 @@
+{
+  "train": {
+    "pairs": 120000,
+    "en_words_mean": 14.99,
+    "hi_words_mean": 16.0,
+    "en_words_max": 40,
+    "hi_words_max": 55,
+    "en_vocab": 112685,
+    "hi_vocab": 123282
+  },
+  "val": {
+    "pairs": 520,
+    "en_words_mean": 17.71,
+    "hi_words_mean": 17.9,
+    "en_words_max": 62,
+    "hi_words_max": 59,
+    "en_vocab": 2863,
+    "hi_vocab": 2757
+  },
+  "test": {
+    "pairs": 500,
+    "en_words_mean": 18.64,
+    "hi_words_mean": 21.52,
+    "en_words_max": 40,
+    "hi_words_max": 51,
+    "en_vocab": 3640,
+    "hi_vocab": 3505
+  },
+  "raw_counts": {
+    "train": 1659083,
+    "validation": 520,
+    "test": 2507
+  },
+  "after_filtering_train_pool": 837143,
+  "filter_retention_pct": 50.46
+}

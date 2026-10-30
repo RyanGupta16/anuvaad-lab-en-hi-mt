@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+checkpoints/
+data/train.jsonl
+data/spm_corpus.txt
+logs/
+.ipynb_checkpoints/

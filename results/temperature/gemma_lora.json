@@ -1,0 +1,213 @@
+{
+ "key": "gemma_lora",
+ "label": "Gemma-3-1B (LoRA)",
+ "sweep": [
+  {
+   "temperature": 0.0,
+   "bleu": 14.043707731972939,
+   "chrf": 39.28533638193198,
+   "semantic_fidelity": 0.7950995804866156,
+   "hallucination_rate": 14.000000000000002,
+   "self_bleu": 100.0,
+   "distinct_2": 85.68534773801485
+  },
+  {
+   "temperature": 0.3,
+   "bleu": 13.424168509320744,
+   "chrf": 38.13342424360823,
+   "semantic_fidelity": 0.7874608687559763,
+   "hallucination_rate": 10.666666666666668,
+   "self_bleu": 45.51363716816804,
+   "distinct_2": 85.45012748983868
+  },
+  {
+   "temperature": 0.7,
+   "bleu": 9.597211087022465,
+   "chrf": 33.885150788916604,
+   "semantic_fidelity": 0.7336566955472033,
+   "hallucination_rate": 17.0,
+   "self_bleu": 17.26100520901669,
+   "distinct_2": 87.92425933319436
+  },
+  {
+   "temperature": 1.0,
+   "bleu": 3.6984269072984635,
+   "chrf": 22.35074548504236,
+   "semantic_fidelity": 0.5116589523945004,
+   "hallucination_rate": 61.0,
+   "self_bleu": 2.824819517046849,
+   "distinct_2": 91.93480151933477
+  },
+  {
+   "temperature": 1.3,
+   "bleu": 0.1883590631807886,
+   "chrf": 12.065772750035514,
+   "semantic_fidelity": 0.19759365630879377,
+   "hallucination_rate": 98.66666666666666,
+   "self_bleu": 0.20015254698654947,
+   "distinct_2": 99.65363817323339
+  }
+ ],
+ "samples": {
+  "0.0": [
+   {
+    "src": "However, lead singer Alex Turner's illness has forced them to reschedule the show.",
+    "ref": "लेकिन उनके प्रमुख गायक एलेक्स टर्नर की बीमारी ने उन्हें इस शो की तिथि फिर से निर्धारित करने के लिए बाध्य कर दिया।",
+    "hyp": "हालांकि, गायक एलेक्स टर्नर की बीमारी ने उन्हें शो को रद्द करने के लिए मजबूर किया।"
+   },
+   {
+    "src": "Soon after the drop off, Scarborough was in regular phone contact with Ditta who had been out at the dinner at the Blackburn Rovers football stadium, Ewood Park.",
+    "ref": "नशीली दवा रखे जाने के पश्चात स्कारबोरो डिट्टा के साथ नियमित रूप से फोन पर सम्पर्क में था, जो ब्लैकर्न रोवर्स फुटबॉल स्टेडियम, ईवुड पार्क में डिनर के लिए बाहर गया था।",
+    "hyp": "शुरुआत में ही, स्कोट्स के लिए एक फोन कॉल किया गया था, जो Blackburn Rovers फुटबॉल स्टेडियम में एक रात्रिभोज में थे।"
+   },
+   {
+    "src": "Experts say confessions are still routinely coerced, despite a change in the law earlier this year banning the authorities from forcing anyone to incriminate themselves.",
+    "ref": "विशेषज्ञों का कहना है कि समय-समय पर बलपूर्वक दोष-स्वीकृति करवाया जाता है, बावजूद इसके कि इस वर्ष के उत्तरार्ध में एक कानून ने अधिकारियों को किसी व्यक्ति को स्वयं को दोषी ठहराने के लिए बाध्य करने से प्रतिबंधित किया था।",
+    "hyp": "विशेषज्ञों का कहना है कि confessions अभी भी नियमित रूप से आरोपित किए जाते हैं, भले ही पिछले वर्ष कानून में बदलाव के बावजूद, अधिकारियों को किसी को खुद को दोषी ठहराने के लिए मजबूर करने की अनुमति नहीं है।"
+   },
+   {
+    "src": "Scarborough himself was jailed for 14 years after pleading guilty to conspiracy to supply heroin, cocaine and cannabis.",
+    "ref": "स्कारबोरो को हीरोईन, कोकेन तथा भांग की आपूर्ति करने के लिए षड्यंत्र करने का दोषी पाए जाने के पश्चात 14 वर्ष का कारावास दिया गया।",
+    "hyp": "सावर्ड्कर को 14 साल की जेल की गई थी, क्योंकि उन्होंने साजिश के लिए हेरोइन, कोकीन और कैनबिस की आपूर्ति करने के लिए दोषी होने के लिए अपराध स्वीकार किया था।"
+   },
+   {
+    "src": "\"He does not want multi-party democracy, he does not want transparent elections he does not want peace because he does not want to leave the presidency,\" Mr Mazanga said.",
+    "ref": "\"वह बहुदलीय लोकतंत्र नहीं चाहता है, वह राष्ट्रपतित्व को छोड़नानहीं चाहता है क्योंकि वह शांति नहीं चाहता है पारदर्शी चुनाव नहीं चाहता है, \"श्री माझांग ने कहा..",
+    "hyp": "वह बहुपक्षीय लोकतंत्र नहीं चाहता, वह पारदर्शी चुनाव नहीं चाहता, वह शांति नहीं चाहता क्योंकि वह राष्ट्रपति के पद से भी नहीं चाहता,\" श्री मांजान ने कहा।"
+   },
+   {
+    "src": "It includes woven trousers, graphic T-shirts, polo neck T-shirts, shorts, skirts and jackets.",
+    "ref": "इसमें वूवन पैंट्स, ग्राफिक टीज, पोलो टी शर्टे, शर्टे, शॉट्स, स्कर्टे और जैकेटें इत्यादि शामिल है।",
+    "hyp": "इसमें परिष्कृत पट्टिका, ग्राफिक टी-शर्ट, पोलो गर्दन टी-शर्ट, शॉर्ट्स, स्कर्ट और जैकेट शामिल हैं।"
+   }
+  ],
+  "0.3": [
+   {
+    "src": "However, lead singer Alex Turner's illness has forced them to reschedule the show.",
+    "ref": "लेकिन उनके प्रमुख गायक एलेक्स टर्नर की बीमारी ने उन्हें इस शो की तिथि फिर से निर्धारित करने के लिए बाध्य कर दिया।",
+    "hyp": "हालांकि, गायक एलेक्स टर्नर की बीमारी ने उन्हें शो को फिर से निर्धारित करने के लिए मजबूर किया।"
+   },
+   {
+    "src": "Soon after the drop off, Scarborough was in regular phone contact with Ditta who had been out at the dinner at the Blackburn Rovers football stadium, Ewood Park.",
+    "ref": "नशीली दवा रखे जाने के पश्चात स्कारबोरो डिट्टा के साथ नियमित रूप से फोन पर सम्पर्क में था, जो ब्लैकर्न रोवर्स फुटबॉल स्टेडियम, ईवुड पार्क में डिनर के लिए बाहर गया था।",
+    "hyp": "अचानक ही, स्लोप के बाद से, स्कोर्बेटोन ने डीटा के साथ नियमित रूप से फोन संपर्क किया, जो Blackburn Rovers फुटबॉल स्टेडियम में रात्रिभोज के लिए बाहर थी।"
+   },
+   {
+    "src": "Experts say confessions are still routinely coerced, despite a change in the law earlier this year banning the authorities from forcing anyone to incriminate themselves.",
+    "ref": "विशेषज्ञों का कहना है कि समय-समय पर बलपूर्वक दोष-स्वीकृति करवाया जाता है, बावजूद इसके कि इस वर्ष के उत्तरार्ध में एक कानून ने अधिकारियों को किसी व्यक्ति को स्वयं को दोषी ठहराने के लिए बाध्य करने से प्रतिबंधित किया था।",
+    "hyp": "विशेषज्ञों का कहना है कि confessions अभी भी नियमित रूप से लागू किया जाता है, भले ही कानून में इस वर्ष पहले इस साल किसी को भी खुद को संदेहास्पद साबित करने के लिए मजबूर करने की अनुमति नहीं दी गई है।"
+   },
+   {
+    "src": "Scarborough himself was jailed for 14 years after pleading guilty to conspiracy to supply heroin, cocaine and cannabis.",
+    "ref": "स्कारबोरो को हीरोईन, कोकेन तथा भांग की आपूर्ति करने के लिए षड्यंत्र करने का दोषी पाए जाने के पश्चात 14 वर्ष का कारावास दिया गया।",
+    "hyp": "स्कार्वॉर्कर को 14 साल की जेल की थी।"
+   },
+   {
+    "src": "\"He does not want multi-party democracy, he does not want transparent elections he does not want peace because he does not want to leave the presidency,\" Mr Mazanga said.",
+    "ref": "\"वह बहुदलीय लोकतंत्र नहीं चाहता है, वह राष्ट्रपतित्व को छोड़नानहीं चाहता है क्योंकि वह शांति नहीं चाहता है पारदर्शी चुनाव नहीं चाहता है, \"श्री माझांग ने कहा..",
+    "hyp": "वह बहुपक्षीय लोकतंत्र नहीं चाहता, वह पारदर्शी चुनाव नहीं चाहता, वह शांति चाहता नहीं क्योंकि वह राष्ट्रपति छोड़ना नहीं चाहता,\" श्री मांजान ने कहा।"
+   },
+   {
+    "src": "It includes woven trousers, graphic T-shirts, polo neck T-shirts, shorts, skirts and jackets.",
+    "ref": "इसमें वूवन पैंट्स, ग्राफिक टीज, पोलो टी शर्टे, शर्टे, शॉट्स, स्कर्टे और जैकेटें इत्यादि शामिल है।",
+    "hyp": "इसमें परिष्कृत छाती वाले ट्राउज़र, ग्राफिक टी-शर्ट, पोलो नेक टी-शर्ट, शॉर्ट्स, स्कर्ट और जैकेट शामिल हैं।"
+   }
+  ],
+  "0.7": [
+   {
+    "src": "However, lead singer Alex Turner's illness has forced them to reschedule the show.",
+    "ref": "लेकिन उनके प्रमुख गायक एलेक्स टर्नर की बीमारी ने उन्हें इस शो की तिथि फिर से निर्धारित करने के लिए बाध्य कर दिया।",
+    "hyp": "हालाँकि, निर्माणकर्ता के गायक एलेक्स टर्नर की बीमारी ने उन्हें प्रदर्शन को रद्द करने के लिए मजबूर किया।"
+   },
+   {
+    "src": "Soon after the drop off, Scarborough was in regular phone contact with Ditta who had been out at the dinner at the Blackburn Rovers football stadium, Ewood Park.",
+    "ref": "नशीली दवा रखे जाने के पश्चात स्कारबोरो डिट्टा के साथ नियमित रूप से फोन पर सम्पर्क में था, जो ब्लैकर्न रोवर्स फुटबॉल स्टेडियम, ईवुड पार्क में डिनर के लिए बाहर गया था।",
+    "hyp": "जहाँ से सुबह समुद्र तट पर, इस समय तक, सबसे आगे, इलियट की बात की, भगवान का एक अच्छा विश्वास है।"
+   },
+   {
+    "src": "Experts say confessions are still routinely coerced, despite a change in the law earlier this year banning the authorities from forcing anyone to incriminate themselves.",
+    "ref": "विशेषज्ञों का कहना है कि समय-समय पर बलपूर्वक दोष-स्वीकृति करवाया जाता है, बावजूद इसके कि इस वर्ष के उत्तरार्ध में एक कानून ने अधिकारियों को किसी व्यक्ति को स्वयं को दोषी ठहराने के लिए बाध्य करने से प्रतिबंधित किया था।",
+    "hyp": "विशेषज्ञों का कहना है कि confessions अभी भी नियमित रूप से इस वर्ष कानून में बदलाव के बावजूद किसी को खुद को संदेह के लिए प्रवण करने के लिए मजबूर किया जा रहा है।"
+   },
+   {
+    "src": "Scarborough himself was jailed for 14 years after pleading guilty to conspiracy to supply heroin, cocaine and cannabis.",
+    "ref": "स्कारबोरो को हीरोईन, कोकेन तथा भांग की आपूर्ति करने के लिए षड्यंत्र करने का दोषी पाए जाने के पश्चात 14 वर्ष का कारावास दिया गया।",
+    "hyp": "सि שאवर्ड्स को 14 वर्ष की सजा की गई थी न केवल लांस के लिए बल्कि ड्रग्स, कोकेन और मतात्राण के लिए भी।"
+   },
+   {
+    "src": "\"He does not want multi-party democracy, he does not want transparent elections he does not want peace because he does not want to leave the presidency,\" Mr Mazanga said.",
+    "ref": "\"वह बहुदलीय लोकतंत्र नहीं चाहता है, वह राष्ट्रपतित्व को छोड़नानहीं चाहता है क्योंकि वह शांति नहीं चाहता है पारदर्शी चुनाव नहीं चाहता है, \"श्री माझांग ने कहा..",
+    "hyp": "इसका परिणाम है कि उनका विश्वास यह है कि सभी लोकतंत्र की अनुमति नहीं दी जानी चाहिए। यह भी कि वे पारदर्शिता पसंद नहीं करते हैं, तथा शांति की अधिक इच्छा रखते हैं, तथा राष्ट्रपति पद से भी वे निर्वाह नहीं करते हैं।"
+   },
+   {
+    "src": "It includes woven trousers, graphic T-shirts, polo neck T-shirts, shorts, skirts and jackets.",
+    "ref": "इसमें वूवन पैंट्स, ग्राफिक टीज, पोलो टी शर्टे, शर्टे, शॉट्स, स्कर्टे और जैकेटें इत्यादि शामिल है।",
+    "hyp": "यह घर्मन छाती वाली टोपी, ग्राफिक टी-शर्ट, पोलो-नेक टी-शर्ट, शॉर्ट्स, स्कार्फ और जैकेट सहित विभिन्न प्रकार के परिधानों को शामिल करता है।"
+   }
+  ],
+  "1.0": [
+   {
+    "src": "However, lead singer Alex Turner's illness has forced them to reschedule the show.",
+    "ref": "लेकिन उनके प्रमुख गायक एलेक्स टर्नर की बीमारी ने उन्हें इस शो की तिथि फिर से निर्धारित करने के लिए बाध्य कर दिया।",
+    "hyp": "परंतु गीतकार एलेक्स टकर, जिसका भी illness है, उन्हें bx show का एडજवेंट ने ट्रಂಗित किया है।"
+   },
+   {
+    "src": "Soon after the drop off, Scarborough was in regular phone contact with Ditta who had been out at the dinner at the Blackburn Rovers football stadium, Ewood Park.",
+    "ref": "नशीली दवा रखे जाने के पश्चात स्कारबोरो डिट्टा के साथ नियमित रूप से फोन पर सम्पर्क में था, जो ब्लैकर्न रोवर्स फुटबॉल स्टेडियम, ईवुड पार्क में डिनर के लिए बाहर गया था।",
+    "hyp": "बच्चों के विसर्जन के बाद, एक बड़ी आनथन से खबरें आ गई। मुलाक़ात, कैचजादे कीolução हु गयी ध्वनि दिशा में घुटने की थिक картина देखने में पளுсну her चेहरे पर हो गयी।"
+   },
+   {
+    "src": "Experts say confessions are still routinely coerced, despite a change in the law earlier this year banning the authorities from forcing anyone to incriminate themselves.",
+    "ref": "विशेषज्ञों का कहना है कि समय-समय पर बलपूर्वक दोष-स्वीकृति करवाया जाता है, बावजूद इसके कि इस वर्ष के उत्तरार्ध में एक कानून ने अधिकारियों को किसी व्यक्ति को स्वयं को दोषी ठहराने के लिए बाध्य करने से प्रतिबंधित किया था।",
+    "hyp": "विशेषज्ञ इस बात से सहमत हुए हैं, कि जांच वाले लोगों को अभी भी ररा सहज सरूररूपाएँ से झगड़ा करके खुद को किसी काम का लिए फँसा गई है, मायें लागू किया गया है, जो पहले वर्ष के बाद जेलन की ना की थी।"
+   },
+   {
+    "src": "Scarborough himself was jailed for 14 years after pleading guilty to conspiracy to supply heroin, cocaine and cannabis.",
+    "ref": "स्कारबोरो को हीरोईन, कोकेन तथा भांग की आपूर्ति करने के लिए षड्यंत्र करने का दोषी पाए जाने के पश्चात 14 वर्ष का कारावास दिया गया।",
+    "hyp": "0 से 4 वर्ष की सजा का श्हाला का अपराध चुपचुपड़ा का कारम्निتاج गंभीर सखुत बनाने के accomplice की आरोप का नतीजा था जिसका खुलासा प्रयास की गयी पर्वेप सिफ़ों को लूटने का प्रयास था।"
+   },
+   {
+    "src": "\"He does not want multi-party democracy, he does not want transparent elections he does not want peace because he does not want to leave the presidency,\" Mr Mazanga said.",
+    "ref": "\"वह बहुदलीय लोकतंत्र नहीं चाहता है, वह राष्ट्रपतित्व को छोड़नानहीं चाहता है क्योंकि वह शांति नहीं चाहता है पारदर्शी चुनाव नहीं चाहता है, \"श्री माझांग ने कहा..",
+    "hyp": "पार्टी विरोधी अधिग्रहण चाहिए, प्रामाणिक मतदान चाहिए और शांति चाहिए क्योंकि वह नाбира बोलचना चाहता है!"
+   },
+   {
+    "src": "It includes woven trousers, graphic T-shirts, polo neck T-shirts, shorts, skirts and jackets.",
+    "ref": "इसमें वूवन पैंट्स, ग्राफिक टीज, पोलो टी शर्टे, शर्टे, शॉट्स, स्कर्टे और जैकेटें इत्यादि शामिल है।",
+    "hyp": "इसमें स्लीव्ड पो लाइफ स्लीव्ड टी-शर्ट, पोल्क नट्स टी-शर्ट, स्वेट işaret выполнен टी-शर्ट, शॉर्ट्स, स्कर्ट तथा जैकेट शामिल है।"
+   }
+  ],
+  "1.3": [
+   {
+    "src": "However, lead singer Alex Turner's illness has forced them to reschedule the show.",
+    "ref": "लेकिन उनके प्रमुख गायक एलेक्स टर्नर की बीमारी ने उन्हें इस शो की तिथि फिर से निर्धारित करने के लिए बाध्य कर दिया।",
+    "hyp": "सांगਗੀ हो चुकी ईSessions ग्ल Citedलय के बड़ीailabilityसह वॉलें जाएंगे뭄 हैं।"
+   },
+   {
+    "src": "Soon after the drop off, Scarborough was in regular phone contact with Ditta who had been out at the dinner at the Blackburn Rovers football stadium, Ewood Park.",
+    "ref": "नशीली दवा रखे जाने के पश्चात स्कारबोरो डिट्टा के साथ नियमित रूप से फोन पर सम्पर्क में था, जो ब्लैकर्न रोवर्स फुटबॉल स्टेडियम, ईवुड पार्क में डिनर के लिए बाहर गया था।",
+    "hyp": "भारतीय பண से जल्दी सात गाड़ियों ने அதிகтового वगगार обеспечить किया। इस आयी बैलेпорт तक Jadi घट शी yüzdenर बस गई. स्थानोlässषिक人之 मुख्य काम खो ru यदि जल्दtranslation 있으 প্রতিবেদনে कामी कतगणना इसक समान कती किया irá।"
+   },
+   {
+    "src": "Experts say confessions are still routinely coerced, despite a change in the law earlier this year banning the authorities from forcing anyone to incriminate themselves.",
+    "ref": "विशेषज्ञों का कहना है कि समय-समय पर बलपूर्वक दोष-स्वीकृति करवाया जाता है, बावजूद इसके कि इस वर्ष के उत्तरार्ध में एक कानून ने अधिकारियों को किसी व्यक्ति को स्वयं को दोषी ठहराने के लिए बाध्य करने से प्रतिबंधित किया था।",
+    "hyp": "সাংஞानাবিশानेेने कहा Executorలేదు अच्छी अवस्था मेंद्धस्त haga el पूरा контрольʷए कि व्यवस्थासत्र والإनेश्वर संपादितής भतुrainte realizaई करा लेंकीÂ सरे})-\\()वह अपनीால वृगा சிறு हु pointer or के सोचा uitvo प्रवेश किराएловifik उपementara हटाষ্ট शानீர் uitgeれない कराियोँ)।"
+   },
+   {
+    "src": "Scarborough himself was jailed for 14 years after pleading guilty to conspiracy to supply heroin, cocaine and cannabis.",
+    "ref": "स्कारबोरो को हीरोईन, कोकेन तथा भांग की आपूर्ति करने के लिए षड्यंत्र करने का दोषी पाए जाने के पश्चात 14 वर्ष का कारावास दिया गया।",
+    "hyp": "सावर्ड बहुत ज़्यादाPYTHON कोributing Verifica necrosis恝 sexrimination गंदगी के लिए जेल Exploitation सहित अपराध काMens teşigungen अंग्रेज गुह ent मिली।"
+   },
+   {
+    "src": "\"He does not want multi-party democracy, he does not want transparent elections he does not want peace because he does not want to leave the presidency,\" Mr Mazanga said.",
+    "ref": "\"वह बहुदलीय लोकतंत्र नहीं चाहता है, वह राष्ट्रपतित्व को छोड़नानहीं चाहता है क्योंकि वह शांति नहीं चाहता है पारदर्शी चुनाव नहीं चाहता है, \"श्री माझांग ने कहा..",
+    "hyp": "ления के डरवेग जो पैरभागी विभिन्नथைகளால் पूर्वीীকরণ की्_, जించినphosphorylation योग्यता赖সে और पुள시오्र bιεव मिलाकरsubstitutedковый राष्ट्र(1' düşünनाले大力);"
+   },
+   {
+    "src": "It includes woven trousers, graphic T-shirts, polo neck T-shirts, shorts, skirts and jackets.",
+    "ref": "इसमें वूवन पैंट्स, ग्राफिक टीज, पोलो टी शर्टे, शर्टे, शॉट्स, स्कर्टे और जैकेटें इत्यादि शामिल है।",
+    "hyp": "इसमें холस्ट एक टाईटेल वाला पर्פתח लिप ईमेल टी स्यहस कॉ verlsee टे jersey सब् inanirt찌कल ஊणे Maskslepッタ लेबल करतोющи पदyte टेलीरुटीरschodै रू ग گا۔κραsinhⲟन् संस्थातुкаতিakचेअत। (@alurश्रीText моей ज़रूर है।"
+   }
+  ]
+ }
+}

@@ -1,0 +1,97 @@
+{
+  "model": "llama",
+  "base_model": "unsloth/Llama-3.2-1B-Instruct",
+  "params": 1235814400,
+  "trainable_params": 11272192,
+  "train_time_sec": 2711.3832120895386,
+  "train_pairs": 6000,
+  "device": "mps",
+  "history": [
+    {
+      "step": 0,
+      "loss_ema": 1.6228843927383423
+    },
+    {
+      "step": 50,
+      "loss_ema": 1.5941876730336333
+    },
+    {
+      "step": 100,
+      "loss_ema": 1.533937789478242
+    },
+    {
+      "step": 150,
+      "loss_ema": 1.4947741792962725
+    },
+    {
+      "step": 200,
+      "loss_ema": 1.4964379569404096
+    },
+    {
+      "step": 250,
+      "loss_ema": 1.4720392771100257
+    },
+    {
+      "step": 300,
+      "loss_ema": 1.4641940619939144
+    },
+    {
+      "step": 350,
+      "loss_ema": 1.416144186864793
+    },
+    {
+      "step": 400,
+      "loss_ema": 1.3675697431527731
+    },
+    {
+      "step": 450,
+      "loss_ema": 1.4160665934294476
+    },
+    {
+      "step": 500,
+      "loss_ema": 1.4119628555647217
+    },
+    {
+      "step": 550,
+      "loss_ema": 1.4061685394378955
+    },
+    {
+      "step": 600,
+      "loss_ema": 1.3700305752185713
+    },
+    {
+      "step": 650,
+      "loss_ema": 1.389753150502024
+    },
+    {
+      "step": 700,
+      "loss_ema": 1.3730751469634372
+    }
+  ],
+  "val_bleu": 8.361096788566275,
+  "val_chrf": 33.83708288098636,
+  "config": {
+    "model_id": "unsloth/Llama-3.2-1B-Instruct",
+    "short": "llama",
+    "train_size": 6000,
+    "epochs": 1,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "max_len": 160,
+    "max_new_tokens": 120,
+    "n_shots": 4,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}
